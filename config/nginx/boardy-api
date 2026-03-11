@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name api.barsik.ai-info.ru;
+
+    root /var/www/boardy-api;
+    index index.html;
+
+    access_log /var/log/nginx/boardy-api-access.log;
+    error_log  /var/log/nginx/boardy-api-error.log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
