@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Content-Type: text/html; charset=utf-8"
+echo ""
+echo "<html><body>"
+echo "<h1>CGI работает!</h1>"
+echo "<p>Время: $(date)</p>"
+echo "<p>Метод: $REQUEST_METHOD</p>"
+echo "<p>Ваш IP: $REMOTE_ADDR</p>"
+echo "<p>User-Agent: $HTTP_USER_AGENT</p>"
+echo "</body></html>"
