@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boardy — Обратная связь</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/">Boardy</a></h1>
+    </header>
+    <main>
+        <h2>Обратная связь</h2>
+        <form method="POST" action="/submit.php">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
+    <footer><p><a href="/">На главную</a></p></footer>
+</body>
+</html>
