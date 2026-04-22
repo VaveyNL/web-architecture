@@ -1,0 +1,149 @@
+/* === Шапка === */
+.topnav {
+    background: #1A5276;
+    color: #fff;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: system-ui, sans-serif;
+}
+.topnav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.topnav a:hover {
+    text-decoration: underline;
+}
+.topnav .brand {
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 8px;
+}
+.topnav .greeting {
+    margin-left: auto;
+    opacity: 0.9;
+}
+
+/* === Форма регистрации/логина === */
+.form-card {
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    font-family: system-ui, sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.form-card h2 {
+    margin: 0 0 20px;
+    font-size: 22px;
+    color: #1A5276;
+}
+.form-card label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 14px;
+    color: #333;
+}
+.form-card input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.form-card .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #1A5276;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-card .btn:hover { background: #154360; }
+.form-card .form-footer {
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+}
+.form-card .form-footer a { color: #1A5276; }
+.form-card .error {
+    background: #fdecea;
+    color: #b71c1c;
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* === Форма добавления поста === */
+.post-form {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: system-ui, sans-serif;
+}
+.post-form h2 {
+    color: #1A5276;
+    margin-bottom: 16px;
+}
+.post-form textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: inherit;
+    resize: vertical;
+}
+.post-form .btn {
+    margin-top: 12px;
+    padding: 10px 24px;
+    background: #1A5276;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.post-form .btn:hover { background: #154360; }
+
+/* === Лента постов === */
+.posts {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: system-ui, sans-serif;
+}
+.posts h2 {
+    color: #1A5276;
+}
+.post {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #fff;
+}
+.post .author {
+    font-weight: 600;
+    color: #1A5276;
+}
+.post .date {
+    font-size: 13px;
+    color: #888;
+    margin-left: 8px;
+}
+.post .body {
+    margin-top: 8px;
+    white-space: pre-wrap;
+}
