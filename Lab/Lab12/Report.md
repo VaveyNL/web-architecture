@@ -319,6 +319,12 @@ composer require laravel/socialite
 
 ![](screenshots/28-mysql-github-id.png)
 
+---
+
+## Pull Request
+
+![](screenshots/29-pull-request.png)
+
 **Защитный вопрос: сравните количество строк кода Lab11 (ручной OAuth) и Lab12 (Socialite). Что сократилось и за счёт чего?**
 
 **Lab11 (чистый PHP):**
