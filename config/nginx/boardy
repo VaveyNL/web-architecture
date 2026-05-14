@@ -1,0 +1,36 @@
+server {
+    listen 80 default_server;
+    server_name localhost;
+
+    root /var/www/boardy/public;
+    index index.php;
+
+    access_log /var/log/nginx/boardy-access.log;
+    error_log  /var/log/nginx/boardy-error.log;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT   $realpath_root;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+
+    location /phpmyadmin {
+        alias /usr/share/phpmyadmin;
+        index index.php;
+        location ~ \.php$ {
+            fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;
+            include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $request_filename;
+        }
+    }
+}
