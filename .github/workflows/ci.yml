@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, dev]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP syntax check
+        run: |
+          find boardy-laravel -name "*.php" -not -path "*/vendor/*" -print0 \
+            | xargs -0 -n1 -P4 php -l
+      - name: Python syntax check
+        run: python -m compileall boardy-api -q
