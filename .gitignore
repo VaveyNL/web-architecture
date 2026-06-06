@@ -1,2 +1,21 @@
+# Секреты
 /.env
 boardy-laravel/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Node / фронт
+node_modules/
+*.map
+
+# PHP
+vendor/
+
+# Прочее
+.DS_Store
+*.log
