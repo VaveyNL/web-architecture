@@ -11,5 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Заглушка
-        run: echo "workflow запустился"
+      - name: PHP syntax check
+        run: |
+          find boardy-laravel -name "*.php" -not -path "*/vendor/*" -print0 \
+            | xargs -0 -n1 -P4 php -l
+      - name: Python syntax check
+        run: python -m compileall boardy-api -q
